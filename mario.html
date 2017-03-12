@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+			font-weight: bold;
+			margin-top: -38px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+			margin-right: 25%;
+			margin-left: 25%;
+			padding-right: 50px;
+			padding-left: 50px;
+			padding-bottom: 50px;
+			border: 1px solid black;
+        }
+
+        .invalid-field {
+            border: 1px solid red;
+        }
+
+        .error-message {
+            color: red;
+        }
+		
+		#showHeight {
+			display: inline;
+		}
+		
+		h1 {
+			background-color: blue;
+			font-size: 2.5em;
+			padding: 25px;
+			color: white;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		
+		#draw-form {
+			background-color: #BDC3C7;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		
+		
+    </style>
+</head>
+<body>
+    <h1>Pyramid Slide</h1>
+
+    <form id="draw-form">
+		<label>
+			Brick Symbol:
+            <select id="symbol">
+			  <option value="#">#</option>
+			  <option value="@">@</option>
+			  <option value="X">X</option>
+			  <option value="$">$</option>
+			</select>
+        </label>
+        <label>
+            How high?
+            <input type="range" id="height" min="1" max="20"/>
+            <label class="error-message">
+                <!-- If there was a user error, we will put a message in here -->
+            </label>
+        </label>
+		<div id="showHeight"></div>
+        <br><br>
+    </form>
+
+    <br><br>
+
+    <div id="pyramid"></div>
+
+    <script src="mario.js"></script>
+</body>
+</html>
